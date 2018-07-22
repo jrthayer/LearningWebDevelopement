@@ -1,0 +1,55 @@
+/*font-family: changes the style of the font*/
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
+/*font-size: changes the size of the font*/
+body{
+	font-size: 10px;
+
+}
+
+/*em font unit is in relation to it's parent's value. So this example is
+2x the size of the parent. A common practice is to define the default text size
+in body and use em units for the rest of the page. Without doing so the default 
+text size */
+h1{
+	font-size: 5.0em;
+}
+
+p{
+	font-size: 1.5em;
+}
+
+span{
+	font-size: 2.0em;
+}
+
+/*font-weight: changes the thickness of a font some fonts accepted values between 100-800*/
+p{
+	font-weight: normal;
+}
+
+/*line-height: changes the height of a line. This property multiples the line height by 
+the value given, the default value is defined by the font*/
+p{
+	line-height: 2;
+}
+
+/*text-align: determine how the text is aligned. Center, right, left*/
+h1{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+/*text-decoration: gives text a underline, overline, or line-through affect*/
+h1{
+	text-decoration: line-through;
+}
+
+span{
+	text-decoration: underline;
+}

@@ -1,0 +1,45 @@
+/*Note how these style selectors overwrite the style tag in the html*/
+/*This is because style changes start from the top and go down(or casscade), 
+this means that the earlier styles can be overwritten by future style changes if
+they both affect the same tags*/
+h1{
+	/*color: red;*/
+
+	/*although there are alot of word defined colors in base html the more practical 
+	design choice is using hexadecimal(first two digits red, then green, and then blue)*/
+	/*color: #FF0000;*/
+
+	/*or rgb(which has three channels that range from 0-255: red, blue, green)*/
+	/*color: rgb(255,0,0);*/
+
+	/*rgba is the same as rgb but has a forth alpha(which affects transparency) channel 
+	that ranges from 0-1*/
+	color: rgba(255,0,0,.5);
+
+
+	/*border-color: purple;
+	border-width: 5px;
+	border-style: solid;*/
+
+	/*border is equivalent to the three properties together since
+	borders usually use all three of them when defined*/
+	border: 5px solid rgb(255,0,0);
+
+}
+
+h4{
+	background: rgb(255,100,80);
+}
+
+li{
+	color: blue;
+}
+
+body{
+
+	background: rgb(0,0,0);
+	/*background: url(http://static.vecteezy.com/system/resources/previews/000/164/421/non_2x/vector-wood-grain-texture.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+}
+

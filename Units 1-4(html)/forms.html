@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Forms</title>
+	</head>
+	
+	<body>
+		<h1>Login</h1>
+
+		<!-- Forms are used to get data from the user and then sending that data somewhere else to be used -->
+		<!-- action attribute = where the form sends the data -->
+		<!-- method attribute = what HTTP method is used -->
+		<form>
+			<!-- Labels are used by screenreaders(to help visually/aurally impaired individuals) to determine what each part of the form is used for -->
+			<label>
+				Username:
+				<!-- placeholder attribute = grey letters inside input box -->
+				<!-- required attribute = simnple input validation that is part of standard html that keeps 
+				a user from submitting invalid input based on the input type. Text can't be blank, email can't be blank and must have an @ symbol(note: not necessarly enforced by all browsers, does on chrome) -->
+				<input type="text" name="username" placeholder="username" required>
+			</label>
+
+			<label for="password">Password:</label>
+			<input id="password" type="password" name="password" placeholder="password" required="true">
+			
+			<input type="Submit" name="">
+		</form>
+	</body>
+</html>

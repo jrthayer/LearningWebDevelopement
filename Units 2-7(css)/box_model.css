@@ -1,0 +1,23 @@
+p{
+	border: 2px blue solid;
+	/*width and height*/
+	width: 20%;
+	/*padding- the space between the content and the edges of the object border*/
+	padding: 10px;
+	/*padding-top: 20px;*/
+
+	/*margin- the space between the edge of the object border and the objects around it*/
+	/*if only one value is given the same margin is applied to all sides*/
+	
+	/*top,right,bottom,left*/
+	/*margin: 20px 40px 500px 100px;*/
+	/*margin: 0 auto 0 auto;*/
+
+	/*auto- automatically sets a value(really depends on where it is used), 
+	when used below the result is centering the object. When used on width auto expands to
+	the full space of its parent but when used on height it will only expand to the needed 
+	space of the content*/
+
+	/*top&bottom, left&right*/
+	margin: 0 auto;
+}

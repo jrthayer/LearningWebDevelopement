@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Specificity</title>
+		<style type="text/css">
+			/*This demonstrates that all elements inside body are affected by this 
+			style change. All child tags inherit from their parent classes*/
+			body{
+				color: grey;
+				background: black;
+			}
+
+			/*However if another style selector affects that same tag html/css have to decide which
+			style is used. This is determined ny what is know as Specificity*/
+			
+			/*In this case the styled tags closest to the affected tag wins*/
+			ul{
+				color:blue;
+			}
+
+			/*Same for this one*/
+			li{
+				color: orange;
+			}
+
+			/*However that doesn't explain why class or id overwrites the individual tags*/
+			.highlight{
+				color: yellow;
+			}
+
+			#special{
+				color: pink;
+			}
+			/*This is more specific than the selector below*/
+			#most_specific li{
+				color: green;
+			}
+
+			.more_specific{
+				color: purple;
+			}
+
+			/*essentially id>class&attribute>tag>parent_tag(inheritance)selectors 
+			are more specific in that order.*/
+
+			/*However in reality there is a calculation for specificity*/
+			/*This site calculates specificity: http://specificity.keegan.st*/
+
+			/*Note: if the specificity is the same the later change overrides the earlier*/
+			#test{
+				color: red;
+			}
+
+			#most_specific *{
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>HELLO!!</p>
+
+		<ul>
+			<li id="special" class="hightlight">John</li>
+			<li>Paul</li>
+			<li>George</li>
+			<li class="highlight">Ringo</li>
+		</ul>
+
+		<div id="most_specific">
+			<p>Inside DIV</p>
+			<p id="test">Another Inside Div</p>
+			<ul>
+				<li class="more_specific">one</li>
+				<li>two</li>
+				<li>three</li>
+			</ul>
+		</div>
+	</body>
+</html>

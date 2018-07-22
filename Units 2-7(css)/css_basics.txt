@@ -1,0 +1,29 @@
+CSS Basics
+----------
+
++css demonstration site: csszengarden.com
++named html colors site: colours.neilorangepeel.com
++css selectors that are useful: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
++css system font default stats: www.cssfontstack.com
++free font styles: https://fonts.google.com/
++free use images: unsplash.com
+
+General Rule:
+
+selector{
+	property: value;
+	anotherProperty: value;
+}
+
+example
+//Make all h1's purple with font size of 56px
+h1{
+	color: purple;
+	font-size: 56px;
+}
+
+//Make all img's red borders that are 3px thick;
+img{
+	border-color: red;
+	border-width: 3px;
+}

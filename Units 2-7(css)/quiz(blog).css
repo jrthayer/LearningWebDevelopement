@@ -1,0 +1,43 @@
+/*
+border color: #bdc3c7;
+date color: #3498db;
+h2 color #2c3e50;
+
+font: source sans pro;
+*/
+
+#blog_wall{
+	border: 20px solid #bdc3c7;
+	padding: 15px;
+	margin: 20px auto;
+	width: 80%;
+	max-width: 700px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.blog{
+	
+}
+
+.date{
+	color: #3498db;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+.summary{
+	border-left: 5px solid #bdc3c7;
+	padding-left: 3px;
+}
+
+h2{
+	color: #2c3e50;
+}
+
+
+hr{
+	margin: auto 15px;
+	height: 1px;
+	background: #bdc3c7;
+	border: none;
+}

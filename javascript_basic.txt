@@ -1,0 +1,99 @@
+Primitive Data Types
+----------------------
++numbers -> 4, 9.3, -10 (doesn't matter if decimal or negative, all three are number type)
+	-use order of operation when making calculations with several operators
+
++strings -> "Hello World", "43" (essentially text, surrounded by quotes"")
+	-can use single or double quotes to surround text
+	-escape character == \ (to store a \ use another \ to escape first)
+	-strings can be added together(concatenation) with the + symbol
+	-strings have a length property("hello world".length == 11)
+	-strings can be accessed as an array to get individual characters("hello"[4]=="h")
+
++booleans -> true, false (only two values, true or false)
++null -> developer defined no-value.
++undefined -> default value of variables, hasn't been given a value.
+
+
+Variables
+----------------------
++syntax => var var_name = var_value;
++only one data type, variable(var)
++called by using name given to variable
++can be updated
+	-var name = "Robert";
+	 name = "Bob";
++name convention is camelCase. Not snake_case or kabab-case.
+
+
+Built-In Methods
+----------------------
++alert(alert_message_value) -> browser gives user a pop up window that displays alert_message
++console.log() -> prints values to the console.(really only used for testing)
++prompt() ->  gives user a pop up window that can take user input.(really only used for testing)
++setInterval(function, interval) -> calls the given function every interval in ms
++clearInterval(intervalNum) -> stops running setInterval that is associated with intervalNum
+
+
+Comparison Operators
+----------------------
++ compares two values, results in true or false
++ <,<=, >, >=, ==, !=, ===, !==
++ == operator performs type coercion which compares the values after javascript converts the values 	the to be aa similiar type before comparison
+	-for example true == "1"       //true
+	-            0    == false     //true
+	-            null == undefined //true
+	-            NaN  == NaN       //false
++ === operator test for value and type
+
+
+Logical Operators
+----------------------
++ chains together boolean statements
++ &&, ||, !
+
+
+Conditionals
+----------------------
++ if, else if, else
+
+
+Loops 
+----------------------
++ while(condition){}
++ for(init; condition; step){}
+
+Functions
+----------------------
+	DECLARE
+	function functionName(argument1Name, argument2Name){
+		//what the function does
+		return valueReturned;
+	}
+	USE
+	funtionName();
+
++There are no types needed for the arguments
++If an argument isn't given the argument value defaults to undefined
++return captures the return value from the function so it can be used outside the function
++ In javascript functions can also be defined through a function expression
+	-var name = function(argument){ return value };
+	-if this variable's value is changed you can no longer use this function
++annonymous functions can be created inside another function
+	-setInterval(function(){console.log("I'm a function in a function");}, 2000);
+
+Data Structures
+----------------------
++Arrays
+
+
+Misc
+----------------------
++comments are formatted by starting with //
+	-//this is a comment in javascript
++clear()- clears the chrome console
++.js exstension designates file as a javascript file
++ all values in javascript are inherently "truthy" or "falsey", whether or not they are true/false
+	- Falsy: false, 0, "", null, undefined, NaN
+	- Truthy: everything else
++DRY: Don't Repeat Yourself. 
