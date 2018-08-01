@@ -11,19 +11,19 @@ CSS Basics
 General Rule:
 
 selector{
-	property: value;
-	anotherProperty: value;
+    property: value;
+    anotherProperty: value;
 }
 
 example
 //Make all h1's purple with font size of 56px
 h1{
-	color: purple;
-	font-size: 56px;
+    color: purple;
+    font-size: 56px;
 }
 
 //Make all img's red borders that are 3px thick;
 img{
-	border-color: red;
-	border-width: 3px;
+    border-color: red;
+    border-width: 3px;
 }

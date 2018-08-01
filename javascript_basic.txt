@@ -1,14 +1,14 @@
 Primitive Data Types
 ----------------------
 +numbers -> 4, 9.3, -10 (doesn't matter if decimal or negative, all three are number type)
-	-use order of operation when making calculations with several operators
+    -use order of operation when making calculations with several operators
 
 +strings -> "Hello World", "43" (essentially text, surrounded by quotes"")
-	-can use single or double quotes to surround text
-	-escape character == \ (to store a \ use another \ to escape first)
-	-strings can be added together(concatenation) with the + symbol
-	-strings have a length property("hello world".length == 11)
-	-strings can be accessed as an array to get individual characters("hello"[4]=="h")
+    -can use single or double quotes to surround text
+    -escape character == \ (to store a \ use another \ to escape first)
+    -strings can be added together(concatenation) with the + symbol
+    -strings have a length property("hello world".length == 11)
+    -strings can be accessed as an array to get individual characters("hello"[4]=="h")
 
 +booleans -> true, false (only two values, true or false)
 +null -> developer defined no-value.
@@ -21,29 +21,29 @@ Variables
 +only one data type, variable(var)
 +called by using name given to variable
 +can be updated
-	-var name = "Robert";
-	 name = "Bob";
+    -var name = "Robert";
+     name = "Bob";
 +name convention is camelCase. Not snake_case or kabab-case.
 
 
 Built-In Methods
 ----------------------
-+alert(alert_message_value) 	 -> browser gives user a pop up window that displays alert_message
-+console.log() 			    	 -> prints values to the console.(really only used for testing)
-+prompt() 						 -> gives user a pop up window that can take user input.(really      								     only used for testing)
++alert(alert_message_value)      -> browser gives user a pop up window that displays alert_message
++console.log()                   -> prints values to the console.(really only used for testing)
++prompt()                        -> gives user a pop up window that can take user input.(really                                          only used for testing)
 +setInterval(function, interval) -> calls the given function every interval in ms
-+clearInterval(intervalNum) 	 -> stops running setInterval that is associated with intervalNum
++clearInterval(intervalNum)      -> stops running setInterval that is associated with intervalNum
 
 
 Comparison Operators
 ----------------------
 + compares two values, results in true or false
 + <,<=, >, >=, ==, !=, ===, !==
-+ == operator performs type coercion which compares the values after javascript converts the values 	the to be aa similiar type before comparison
-	-for example true == "1"       //true
-	-            0    == false     //true
-	-            null == undefined //true
-	-            NaN  == NaN       //false
++ == operator performs type coercion which compares the values after javascript converts the values     the to be aa similiar type before comparison
+    -for example true == "1"       //true
+    -            0    == false     //true
+    -            null == undefined //true
+    -            NaN  == NaN       //false
 + === operator test for value and type
 
 
@@ -67,71 +67,71 @@ Loops
 
 Functions
 ----------------------
-	DECLARE
-	function functionName(argument1Name, argument2Name){
-		//what the function does
-		return valueReturned;
-	}
-	USE
-	funtionName();
+    DECLARE
+    function functionName(argument1Name, argument2Name){
+        //what the function does
+        return valueReturned;
+    }
+    USE
+    funtionName();
 
 +There are no types needed or allowed for the arguments
 +If an argument isn't given the argument value defaults to undefined
 +return captures the return value from the function so it can be used outside the function
 + In javascript functions can also be defined through a function expression
-	-var name = function(argument){ return value };
-	-if this variable's value is changed you can no longer use this function
+    -var name = function(argument){ return value };
+    -if this variable's value is changed you can no longer use this function
 +annonymous functions can be created inside another function
-	-setInterval(function(){console.log("I'm a function in a function");}, 2000);
+    -setInterval(function(){console.log("I'm a function in a function");}, 2000);
 
 
 Data Structures
 ----------------------
 +Arrays
-	DECLARE
-	var array = [];
-	var array = new Array(); //uncommon
+    DECLARE
+    var array = [];
+    var array = new Array(); //uncommon
 
-	USE
-	var array = [1, 2, 3, 4];
-	array[1]; //returns 2
+    USE
+    var array = [1, 2, 3, 4];
+    array[1]; //returns 2
 
-	-arrays can be expanded by setting a index with a value(if you skip indexes empty spaces are created)
-		--array[4] = 5; //if value doesn't exist returns undefined
-	-arrays can hold any type of data(no set type) 
-		--var random = [1, true, "string", null];
-	-array.prototype are where the default methods and behaviors of js arrays are defined
-	
-	-Methods
-		--.length 	         -> returns length of array(actually a property not a method)
-		--.push(value)       -> adds value to the back of the array
-		--.pop()       	     -> removes the last element of the array(returns value removed)
-		--.unshift(value)    -> adds value to the front of the array
-		--.shift()		     -> removes value at the front of the array(returns value removed)
-		--.indexOf(val)      -> returns the FIRST element's index whose value is equal to val
-		--.slice(start, end) -> creates a new array whose values are a subset of the array 
-								that calls it.(starting with the start index and ending at the end index)(if you call slice without any arguments you will get a copy of the entire array)
-		--.splice(start, numDeleted*, replace+*) -> removes the number of elements defined by 
-								numDeleted from the array starting at the index defined by start. If numDeleted isn't defined all elements after the start index are deleted. If replace is defined the those elements added to the array beginning at the index defined by start.
-		--.forEach(Function(value, index*, array*)) -> runs function on every element of an 
-								array(this is a good example of how annoymous functions get used). value is the value of the array element, index is the index of the element, and array is the array that called .forEach. If you define a funtion before passing it in only put function name(no parentheses at the end) or the function will be run immediately.
-		--NOTE: argument* means that argument is optional 
-		--NOTE: argument+ means that argument is repeatable
+    -arrays can be expanded by setting a index with a value(if you skip indexes empty spaces are created)
+        --array[4] = 5; //if value doesn't exist returns undefined
+    -arrays can hold any type of data(no set type) 
+        --var random = [1, true, "string", null];
+    -array.prototype are where the default methods and behaviors of js arrays are defined
+    
+    -Methods
+        --.length            -> returns length of array(actually a property not a method)
+        --.push(value)       -> adds value to the back of the array
+        --.pop()             -> removes the last element of the array(returns value removed)
+        --.unshift(value)    -> adds value to the front of the array
+        --.shift()           -> removes value at the front of the array(returns value removed)
+        --.indexOf(val)      -> returns the FIRST element's index whose value is equal to val
+        --.slice(start, end) -> creates a new array whose values are a subset of the array 
+                                that calls it.(starting with the start index and ending at the end index)(if you call slice without any arguments you will get a copy of the entire array)
+        --.splice(start, numDeleted*, replace+*) -> removes the number of elements defined by 
+                                numDeleted from the array starting at the index defined by start. If numDeleted isn't defined all elements after the start index are deleted. If replace is defined the those elements added to the array beginning at the index defined by start.
+        --.forEach(Function(value, index*, array*)) -> runs function on every element of an 
+                                array(this is a good example of how annoymous functions get used). value is the value of the array element, index is the index of the element, and array is the array that called .forEach. If you define a funtion before passing it in only put function name(no parentheses at the end) or the function will be run immediately.
+        --NOTE: argument* means that argument is optional 
+        --NOTE: argument+ means that argument is repeatable
 
 
-	-iteration
-		--for(var i = 0; i < array.length; i++){ console.log(array[i]);}
-		--array.forEach(function(arrayItem){console.log(arrayItem)}); 
+    -iteration
+        --for(var i = 0; i < array.length; i++){ console.log(array[i]);}
+        --array.forEach(function(arrayItem){console.log(arrayItem)}); 
 
 
 
 Misc
 ----------------------
 +comments are formatted by starting with //
-	-//this is a comment in javascript
+    -//this is a comment in javascript
 +clear()- clears the chrome console
 +.js exstension designates file as a javascript file
 + all values in javascript are inherently "truthy" or "falsey", whether or not they are true/false
-	- Falsy: false, 0, "", null, undefined, NaN
-	- Truthy: everything else
+    - Falsy: false, 0, "", null, undefined, NaN
+    - Truthy: everything else
 +DRY: Don't Repeat Yourself. 
