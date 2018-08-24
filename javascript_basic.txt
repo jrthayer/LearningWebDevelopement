@@ -30,9 +30,11 @@ Built-In Methods
 ----------------------
 +alert(alert_message_value)      -> browser gives user a pop up window that displays alert_message
 +console.log()                   -> prints values to the console.(really only used for testing)
-+prompt()                        -> gives user a pop up window that can take user input.(really                                          only used for testing)
++prompt()                        -> gives user a pop up window that can take user 
+                                    input.(really only used for testing)
 +setInterval(function, interval) -> calls the given function every interval in ms
-+clearInterval(intervalNum)      -> stops running setInterval that is associated with intervalNum
++clearInterval(intervalNum)      -> stops running setInterval that is associated with 
+                                    intervalNum
 
 
 Comparison Operators
@@ -67,12 +69,12 @@ Loops
 
 Functions
 ----------------------
-    DECLARE
+    DECLARE============================
     function functionName(argument1Name, argument2Name){
         //what the function does
         return valueReturned;
     }
-    USE
+    USE================================
     funtionName();
 
 +There are no types needed or allowed for the arguments
@@ -88,16 +90,16 @@ Functions
 Data Structures
 ----------------------
 +Arrays
-    DECLARE
+    DECLARE============================
     var array = [];
     var array = new Array(); //uncommon
 
-    USE
+    USE================================
     var array = [1, 2, 3, 4];
-    array[1]; //returns 2
+    array[1]; //returns 2(if value doesn't exist returns undefined)
 
-    -arrays can be expanded by setting a index with a value(if you skip indexes empty spaces are created)
-        --array[4] = 5; //if value doesn't exist returns undefined
+    -arrays can be expanded by setting an index value not currently in the array(if you skip indexes empty values are created in the indexes skipped)
+        --array[5] = 5; //this would add array[4] set to empty and array[5] set to 5
     -arrays can hold any type of data(no set type) 
         --var random = [1, true, "string", null];
     -array.prototype are where the default methods and behaviors of js arrays are defined
@@ -111,18 +113,116 @@ Data Structures
         --.indexOf(val)      -> returns the FIRST element's index whose value is equal to val
         --.slice(start, end) -> creates a new array whose values are a subset of the array 
                                 that calls it.(starting with the start index and ending at the end index)(if you call slice without any arguments you will get a copy of the entire array)
-        --.splice(start, numDeleted*, replace+*) -> removes the number of elements defined by 
-                                numDeleted from the array starting at the index defined by start. If numDeleted isn't defined all elements after the start index are deleted. If replace is defined the those elements added to the array beginning at the index defined by start.
+        --.splice(start, numDeleted*, replace+*)    -> removes the number of elements defined
+                                                       by numDeleted from the array starting at the index defined by start. If numDeleted isn't defined all elements after the start index are deleted. If replace is defined the those elements added to the array beginning at the index defined by start.
         --.forEach(Function(value, index*, array*)) -> runs function on every element of an 
-                                array(this is a good example of how annoymous functions get used). value is the value of the array element, index is the index of the element, and array is the array that called .forEach. If you define a funtion before passing it in only put function name(no parentheses at the end) or the function will be run immediately.
+                                                       array(this is a good example of how annoymous functions get used). value is the value of the array element, index is the index of the element, and array is the array that called .forEach. If you define a funtion before passing it in only put function name(no parentheses at the end) or the function will be run immediately.
         --NOTE: argument* means that argument is optional 
         --NOTE: argument+ means that argument is repeatable
 
-
     -iteration
         --for(var i = 0; i < array.length; i++){ console.log(array[i]);}
-        --array.forEach(function(arrayItem){console.log(arrayItem)}); 
+        --array.forEach(function(arrayItem){console.log(arrayItem)});
 
+    -objects
+        --objects can be stored and created inside an array
+            --var array = [
+                {
+                    varName1: value1,
+                    varName2: value2
+                },
+                {
+                    varName1: value1,
+                    varName2: value2
+                }
+            ] 
+
+
+Objects
+----------------------
+    DECLARE======================
+    //object literal        
+    var objectName = {
+        varName1: value1,   
+        varName2: value2,
+        ...
+    };
+
+    var objectName = {};
+    objectName.varName1 = value1;
+    objectName.varName2 = value2;
+
+    var objectName = new Object();
+    objectName.varName1 = value1;
+    objectName.varName2 = value2;
+
+    USE==========================
+    objectName[varName]; //bracket notation
+    objectName.varName;  //dot notation
+
+    UPDATE=======================
+    objectName[varName] = value;
+    objectName.varName = value;
+
++the two different ways to access object information are dot and bracket notation
+    -dot notation can't be used if the property: 
+        --starts with a number
+        --has a space
+    -bracket notation can be used to access properties while using a variable
+        --object.str  //returns the value of the object's str property
+        --object[str] //evaluates str and then returns the value of the property whose name is 
+                      //equivalent to str
++functions can be added and called in the same way as the properties demonstrated above 
+
+
+DOM(Document Object Model)
+----------------------
++The interface between the javascript and the html/css
++When opened the browser turns every html tag into a javascript object that is stored 
+in the "document"
+    -console.dir(document); -> shows the "document" in the console
++Key Steps in using the "document"
+    SELECT================================
+        var h1 = document.querySelector("h1");
+    MANIPULATE============================
+        h1.style.color = "pink";
++Javascript Object Methods
+    DOCUMENT
+    -document.URL       -> returns the full URL of the HTML document
+    -document.head      -> returns the <head> element of the document
+    -document.body      -> returns the <body> element of the document
+    -document.links     -> returns all <a> and <area> elements that have a href attribute
+    
+    -SELECTORS
+        --document.getElementById("IdName")             -> returns the js object with "IdName"
+        --document.getElementsByClassName("ClassName")  -> returns all objects with a matching 
+                                                           class. Returned in a node list*.
+        --document.getElementsByTagName("TagName")      -> returns all objects that are of 
+                                                           "TagName" type. Returned in a node list*.
+        --document.querySelector("CSS selector")        -> returns the object that matches the 
+                                                           CSS selector given. Always returns a single object. 
+        --document.querySelectorAll("CSS selector")     -> returns all objects that match the 
+                                                           CSS selector given. Can be used even if there is only one object. Returned in a static node list*.
+    TAG
+    -style //these methods change the css properties of the html tag its being called on.
+           //this should be used sparingly because most of the css should be in the css file, the alternative to this is to change/add a different css class that has the set of properties you want done to the tag(as seen @ classList). 
+        --"tag".style.color  = "color"              -> changes css color property.
+        --"tag".style.border = "10px solid red"     -> changes css border property.
+        --"tag".style.fontsize = "70px"             -> changes css fontsize property.
+        --"tag".style.background = "yellow"         -> changes css background property.
+        --"tag".style.marginTop = "200px"           -> changes css marginTop property.
+    -classList //these methods change the class properties of the html tag its being called on.
+        --"tag".classList.add("CSS class name")     -> adds a class to the tag
+        --"tag".classList.remove("CSS class name")  -> removes a class to the tag
+        --"tag".classList.toggle("CSS class name")  -> if a tag has this class it gets 
+                                                       "removed", if it doesn't it gets added
+
+
+
+
+
+
+*Node list - is a lightweight array, offering some of the same functionality but not all.
 
 
 Misc
@@ -135,3 +235,4 @@ Misc
     - Falsy: false, 0, "", null, undefined, NaN
     - Truthy: everything else
 +DRY: Don't Repeat Yourself. 
++popluar js libraries: underscoreJS
