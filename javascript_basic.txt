@@ -216,11 +216,20 @@ in the "document"
         --"tag".classList.remove("CSS class name")  -> removes a class to the tag
         --"tag".classList.toggle("CSS class name")  -> if a tag has this class it gets 
                                                        "removed", if it doesn't it gets added
+    -text Manipulation //retrieves all text from tag and returns a string
+        --"tag".textContent                         -> return text content of tag
+        --"tag".textContent = "new text"            -> set text content of tag //does remove 
+                                                       tags already in text
+        --"tag".innerContent                        -> returns text content of tag and 
+                                                       preserves any tags inside the text
+        --"tag".innerContent = "new <b>text</b>"    -> set text content and applies html 
 
-
-
-
-
+    ATTRIBUTES
+        --"tag".getAttribute("attribute")           -> returns attribute of the tag that calls 
+                                                       it
+        --"tag".setAttribute("name","value")        -> sets attribute that matches "name" to 
+                                                       "value"
+                                         
 
 *Node list - is a lightweight array, offering some of the same functionality but not all.
 
