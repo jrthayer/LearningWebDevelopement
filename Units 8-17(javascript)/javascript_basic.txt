@@ -82,10 +82,10 @@ Functions
 +return captures the return value from the function so it can be used outside the function
 + In javascript functions can also be defined through a function expression
     -var name = function(argument){ return value };
-    -if this variable's value is changed you can no longer use this function
+        -if this variable's value is changed you can no longer use this function
 +annonymous functions can be created inside another function
     -setInterval(function(){console.log("I'm a function in a function");}, 2000);
-
++when being used if a function has paratheses after the name the code is ran immediately, otherwise the name itself is just a reference to the function
 
 Data Structures
 ----------------------
@@ -229,9 +229,63 @@ in the "document"
                                                        it
         --"tag".setAttribute("name","value")        -> sets attribute that matches "name" to 
                                                        "value"
-                                         
+
+    EVENTS
+        --"tag".addEventListener(type, function)    -> adds event listner to tag that calls
+                                                       function after the type of event has been fulfilled
+        *tags can have multiple listners attached to them at the same time
+        *the this keyword will refer to the tag the addEventListener is being called on within addEventLister                                         
 
 *Node list - is a lightweight array, offering some of the same functionality but not all.
+
+
+jQuery
+----------------------
+    -SELECTORS
+        --$("css selectorGoesHere")                 ->works like querySelectorAll
+    TAG
+        -style*
+            --$.css(property, value)                 -> 
+            --$.css(styles)                          -> changes several styles at once
+                var styles = {
+                    color: "red",
+                    backgroundColor: "pink",
+                    border: "2px solid purple"
+                }
+    Methods
+        -textContent
+            --$.text()                              -> works like textContent, except 
+                                                       that all elements text content is returned when there are several elements
+            --$.text("value")                       -> works like textContent, except
+                                                       all the elements have their text set to the value 
+        -innerContent
+            --$.html()                              -> returns all the html inside the element 
+                                                           being called on
+            --$.html("<li>""insert this li"<li>)    -> insert html into the tags selected
+        -attributes
+            --$.attr("attribute")                   -> retrieves attribute for the first 
+                                                       element of matched elements
+            --$.attr("attribute", "value")          -> sets attribute to value on all elements 
+                                                       matched 
+        -classes
+            --$.addClass("class");                  -> adds class to all matched elements
+            --$.removeClass("class");               -> removes class from all matched elements
+            --$.toggleClass("class");               -> toggles class on all matched elements
+        -misc
+            --$.last()                              -> returns last element matched
+            --$.val()                               -> returns values of form elements(like 
+                                                       input: number or text, or dropdowns)
+            --$.val("value")                        -> sets the value inside of selected input
+    Events**
+        --$.click(function(){})                     -> creates a click event listener on all 
+                                                       matched elements
+        --$.keypress(function(event){event.which})  -> creates a keypress event listener on all 
+                                                       matched elements(event.which will give a number that corresponds with char input)
+        --$.on('event', function(){})               -> works like addEventListener but adds to 
+                                                       all elements matched(added to potential future elements?!) 
+
+*applies style changes to all elements selected with $. (very powerful in comparison to vanilla)
+**"this" needs to be wrapped in $() in order to work in the function when using jQuery
 
 
 Misc

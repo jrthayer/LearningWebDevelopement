@@ -1,0 +1,64 @@
+/*element selector. This selector affects all body elements on
+the page that references this style sheet*/
+body{
+	background: orange;
+}
+
+/*ID selector. This selector affects the element that is associated 
+with the equivalent id value(Note: only a SINGLE element can be associated 
+with each unique id)*/
+#id{
+	color: red;
+}
+
+/*This is an example of a class selector. This selector affects all elments associated
+with the equivalent class value(just like an id selector but it
+can be associated with multiple elements)*/
+.class{
+	background: yellow;
+}
+
+/*This is an example of the * selector. This selector affects ALL html elements on the page*/
+*{
+	border: 1px solid black;
+}
+
+/*descendant selector. This selector affects all a elements that are 
+inside(nested) of a li element(or in other words all anchor tags whose parent is a list item). 
+This can be chained as much as you want, for example using three tags in a row. 
+It can also be used with class and ids*/
+li a{
+	color: red;
+}
+
+#id li{
+	color: green;
+}
+
+.class a{
+	color: teal;
+}
+
+/*adjacent selector. This selector affects all tags that are after a 
+specific tag, rather than nested within like descendant selectors. This can also be chained 
+repeatedly if needed/desired*/
+h4 + ul{
+	border: 8px dashed blue;
+}
+
+/*attribute selector. This selector affects all tags of the specified type that also have
+a specific attribute value.(Note: this is quite often used for inputs since there are so many
+different type values// input[type="checkbox"])*/
+a[href="http://www.google.com"]{
+	background: white;
+}
+
+/*nth of type. This selector affects each n-th child tag of the specified type
+(Note: reguardless of the type of its parent)*/
+ul:nth-of-type(3){
+	background: purple;
+}
+
+li:nth-of-type(3){
+	background: pink;
+}
