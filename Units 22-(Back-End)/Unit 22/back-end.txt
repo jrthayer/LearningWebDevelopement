@@ -1,0 +1,17 @@
+Resources
+----------------------
++getpostman.com chrome extension(http reqest tool)
+
+HTTP Requests
+----------------------
+Are processes that determines how the server should respond, helps determine what information should be compiled or saved to the backend. 
+
++GET: receive information from server
+    -only request that can be sent from browser search bar
+    -query string is used to send information to server through a get request
+        --always starts after a ? symbol
++POST: send information to server
++PUT/PATCH: update information that already exists on server
++DELETE: removes information from server
+
+
