@@ -1,0 +1,44 @@
+Command Line Commands
+--------------------------
++cd <dirName>      -> changes to specified to directory
++ls                -> list all files and directories inside 
+                      current directory
++touch <fileName>  -> creates a new empty file with given name
++mkdir <dirName>   -> creates a new empty directory with given name
++rm  <flags>       -> deletes files
+    flags
+    --------
+    -rf -> recursive forced: applies to all child directories and 
+           their files
+
+Node.js
+--------------------------
+    +What is Node? 
+        Node.js is an open-source, cross-platform, JavaScript run-time environment. Which essentially means it allows javascript to be used outside of a browser.
+
+    +Why are we learning it? 
+        *Very popular technology
+        *Takes the place of php
+        *Allows javascript to be used on the backend
+
+    Node Console
+    ------------------
+    *accesed by typing node on command line
+    *similiar to browser console but does not have html or css since it is server side
+    *does lack commands provided by a browser like alert
+
+    Commands
+    ------------------
+    *node            -> opens node console
+    *node <filename> -> runs js file with node
+
+    NPM
+    ------------------
+    *Node Package Manager
+    *Is a central repository with thousands of packages avaliable to install
+    *Lets us install packages easily
+    *Packages- are essentially libraries with the only difference 
+        being that it installs the code set to the server.
+    
+    *npm install <packageName> -> installs package using npm
+
